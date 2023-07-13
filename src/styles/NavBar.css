@@ -1,0 +1,91 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    margin-bottom: 10px;
+}
+
+
+.main-flex-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+  
+.navbar-logo {
+    width: 100px;
+    height: 120px;
+    margin-right: 20px;
+    margin-top: -20px;
+}
+  
+.navbar-toggle {
+    display: none;
+    font-size: calc(1.4rem + 1vw);
+    cursor: pointer;
+    margin-right: 20px;
+}
+  
+.navbar-options {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    list-style: none;
+    gap: 25px;
+    scroll-behavior: smooth;
+}
+
+.smooth-scroll{
+    scroll-behavior: smooth;
+}
+  
+.nav-item {
+    font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
+    cursor: pointer;
+}
+  
+.navbar-cart {
+    font-size: calc(2rem + ((1vw - 7.68px) * 0.6944));
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: bold;
+}
+  
+@media screen and (max-width: 768px) {
+    .navbar {
+        justify-content: space-between;
+        margin-bottom: 0px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar-options{
+        display: none;
+    }
+}
+  

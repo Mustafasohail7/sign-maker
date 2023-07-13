@@ -1,0 +1,44 @@
+.image-container {
+    /* width: 70%; */
+    width: auto;
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 80%;
+}
+  
+.image {
+    width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+    user-select: none;
+    cursor: pointer;
+    font-size: calc(12px + 2.5vw);
+}
+
+.total-amount {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+@media screen and (max-width: 980px) {
+    .image-container {
+        width: 100%;
+        height: 90%;
+    }
+}
+  

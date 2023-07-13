@@ -1,0 +1,37 @@
+.video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    flex-direction: column;
+}
+
+.thumbnail{
+    cursor: pointer;
+}
+
+.thumbnail img{
+    width: 560px;
+    height: 315px;
+}
+
+.thumbnail iframe{
+    width: 560px;
+    height: 315px;
+}
+
+@media screen and (max-width: 600px) {
+    .video-container {
+      margin-left: 2%;
+      margin-right: 2%;
+    }
+
+    .thumbnail {
+        width: 100%;
+    }
+
+    .thumbnail iframe {
+        width: 100%;
+    }
+}
+

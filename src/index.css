@@ -9,5 +9,13 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    monospace
+}
+
+:root {
+  --primary-color: #b2426d;
+  --secondary-color: rgb(40, 130, 240);
+  --bg-color: black;
+  --primary-gradient: linear-gradient(to right, rgb(178, 66, 109) 0%, rgb(175, 64, 127) 50%, rgb(163, 40, 134) 100%);
+  --secondary-gradient: linear-gradient(to right, rgb(40, 130, 240) 0%, rgb(38, 105, 240) 50%, rgb(35, 80, 240) 100%);
 }

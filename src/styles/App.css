@@ -1,0 +1,38 @@
+.function-container {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.component-left{
+  flex: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
+  height: min(100vh,500px);
+  overflow: hidden;
+}
+
+.component-right{
+  flex: 30%;
+  overflow-y: auto;
+}
+
+.static-bg-1{
+  height: 65vh;
+  background: #fff url("../assets/coffee.avif") center center/cover no-repeat fixed;
+}
+
+
+@media screen and (max-width: 980px) {
+    .function-container {
+      flex-direction: column;
+    }
+    .component-left {
+      width: 100%;
+    }
+    .component-right{
+      width: 100%;
+    }
+}
+  

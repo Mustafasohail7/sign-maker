@@ -1,0 +1,25 @@
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0;
+    margin-bottom: 30px;
+}
+  
+.portfolio-item {
+    position: relative;
+    transform-origin: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+  
+.portfolio-item:hover {
+    transform: scale(1.1) skew(-5deg, 0deg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+  
+@media screen and (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3,1fr);
+    }
+}
+  

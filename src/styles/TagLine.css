@@ -1,0 +1,29 @@
+.tagline-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+}
+  
+.tagline {
+    font-size: calc(1.2rem + 1vw);
+    line-height: 1.2;
+    text-align: center;
+    max-width: 80%;
+    word-break: break-word;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.sub-tagline {
+    color: var(--primary-color);
+    word-break: break-word;
+    text-transform: capitalize;
+    line-height: 1.2;
+    font-size: calc(0.8rem + 1vw);
+    font-weight: 600;
+}
+  
