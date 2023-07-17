@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import { useState } from 'react'
 import { Element } from 'react-scroll'
 
@@ -35,7 +35,16 @@ function App() {
   const [userText,setUserText] = useState('Drag Me')
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={extendTheme({
+      styles: {
+        global: {
+          body: {
+            bg: '#111111',
+          }
+        }
+      }
+    })}>
+      {/* <ChakraProvider> */}
       <Header/>
       <NavBar setDropDown={setDropDown} />
       {/* {dropDown && <DropDown dropDown={dropDown}/>} */}
@@ -65,7 +74,7 @@ function App() {
         <TagLine3/>
         <DescriptionText/>
       </Element>
-      <Graphic/>
+      {/* <Graphic/> */}
       <div className="static-bg-1"/>
       <Element name='faq'>
         <FAQ/>

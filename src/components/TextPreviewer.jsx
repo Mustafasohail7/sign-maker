@@ -9,8 +9,14 @@ const TextPreviewer = ({setUserText}) => {
 
   const handleChange = (e) => {
     const newText = e.target.value
-    setText(newText)
-    setUserText(newText)
+    if(newText.length === 0){
+      console.log('here')
+      setText('')
+      setUserText('Drag Me')
+    }else{
+      setText(newText)
+      setUserText(newText)
+    }
   }
 
   return (

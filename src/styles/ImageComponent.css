@@ -21,7 +21,7 @@
     left: 0;
     padding: 10px;
     font-weight: bold;
-    color: white;
+    color: var(--white-color);
     user-select: none;
     cursor: pointer;
     font-size: calc(12px + 2.5vw);
@@ -32,7 +32,7 @@
     top: 10px;
     right: 10px;
     font-weight: bold;
-    color: white;
+    color: var(--white-color);
 }
 
 @media screen and (max-width: 980px) {

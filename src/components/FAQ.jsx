@@ -26,7 +26,7 @@ const FAQ = () => {
                     >
                         <div className='faq-question-flex'>
                             <div className='faq-question'>{item.question}</div>
-                            <AiFillCaretDown size={30} className={activeIndex === item.id ? `rotate` : `normal`}/>
+                            <AiFillCaretDown size={30} className={`caret-btn ${activeIndex === item.id ? 'rotate' : 'normal'}`}/>
                         </div>
                         {/* {activeIndex === item.id && <div className="faq-answer">{item.answer}</div>} */}
                         <div 

@@ -19,6 +19,10 @@
     color: var(--secondary-color);
     text-transform: uppercase
 }
+
+.desc_item p{
+    color: var(--white-color);
+}
   
 @media screen and (max-width: 980px) {
     .desc_text_container{

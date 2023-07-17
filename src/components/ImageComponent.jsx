@@ -70,8 +70,6 @@ const ImageComponent = ({userText,selectedImage}) => {
     };
   }, [textPosition]);
 
-  console.log(selectedImage)
-
   return (
     <div className="image-container" id='image-container'>
       <img src={selectedImage.src} alt="Your" className="image" />

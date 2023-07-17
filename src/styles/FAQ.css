@@ -5,7 +5,7 @@
   
 .faq-heading {
     margin-bottom: 20px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: 700;
     font-size: 2.5rem;
 }
@@ -25,7 +25,7 @@
     cursor: pointer;
     margin-bottom: 20px;
     padding-bottom: 5px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--white-color);
     transition: border-color 0.3s;
     width: 45%;
     align-self: flex-start;
@@ -40,6 +40,7 @@
     font-weight: 400;
     text-transform: capitalize;
     text-align: left;
+    color: var(--white-color);
 }
 
 .faq-question-flex{
@@ -48,12 +49,16 @@
     align-items: center;
 }
 
-.rotate {
+.caret-btn{
+    color: var(--primary-color);
+}
+
+.caret-btn.rotate {
     transform: rotate(-180deg);
     transition: transform 0.5s;
 }
 
-.normal {
+.caret-btn.normal {
     transform: rotate(0deg);
     transition: transform 0.5s;
 }
@@ -64,6 +69,7 @@
     overflow: hidden;
     text-align: left;
     transition: height 0.5s ease-out;
+    color: var(--white-color);
 }
 
 .faq-answer.show{

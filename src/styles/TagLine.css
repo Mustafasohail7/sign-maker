@@ -14,12 +14,12 @@
     word-break: break-word;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-weight: 500;
 }
 
 .sub-tagline {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     word-break: break-word;
     text-transform: capitalize;
     line-height: 1.2;
