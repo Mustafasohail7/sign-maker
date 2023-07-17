@@ -24,7 +24,6 @@ import PortfolioGrid from './components/PortfolioGrid'
 import FeatureGrid from './components/FeatureGrid'
 import TagLine3 from './components/TagLine3'
 import DescriptionText from './components/DescriptionText'
-import Graphic from './components/Graphic'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
 
