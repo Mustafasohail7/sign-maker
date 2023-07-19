@@ -6,7 +6,7 @@ import { Element } from 'react-scroll'
 import './styles/App.css'
 
 //images
-// import coffee from './assets/coffee.avif'
+import coffee from './assets/coffee.avif'
 
 //components
 import NavBar from './components/NavBar'
@@ -32,6 +32,7 @@ function App() {
   const [dropDown,setDropDown] = useState(false)
   const [sticky,setSticky] = useState(false)
   // const [selectedImage,setSelectedImage] = useState({id: 2, title: "Coffee Shop" ,src: coffee})
+  const selectedImage = {id: 2, title: "Coffee Shop" ,src: coffee}
   const [userText,setUserText] = useState('Drag Me')
   const [size, setSize] = useState('small');
   const [color,setColor] = useState('red');
@@ -55,7 +56,7 @@ function App() {
       </div>
       <div className="function-container">
         <div className='component-left' >
-          <ImageComponent userText={userText} size={size} color={color}/>
+          <ImageComponent userText={userText} selectedImage={selectedImage} size={size} color={color}/>
           {/* <ImageSelector selectedImage={selectedImage} setSelectedImage={setSelectedImage} /> */}
         </div>
         <div className='component-right' >
