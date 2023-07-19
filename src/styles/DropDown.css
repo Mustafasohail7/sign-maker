@@ -1,16 +1,30 @@
 .navbar-dropdown{
-    /* display: block; */
     background-color: var(--bg-color);
-    color: white;
-    /* padding: 10px; */
+    color: var(--white-color);
     width: 100%;
-    /* padding-bottom: 10px; */
     height: 0px;
     overflow: hidden;
-    transition: height 0.5s ease-out;
+    transition: height 0.5s ease-in-out;
+}
+
+.navbar-dropdown-scrolled{
+    position: fixed;
+    top: 120px;
+    left: 0;
+    z-index: 1;
+    color: var(--white-color);
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    background-color: var(--primary-color);
+    transition: height 0.5s ease-in-out;
 }
 
 .navbar-dropdown.open{
+    height: 350px;
+}
+
+.navbar-dropdown-scrolled.open{
     height: 350px;
 }
 

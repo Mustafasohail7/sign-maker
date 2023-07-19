@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 80%;
+    height: 100%;
 }
   
 .image {
@@ -19,12 +19,37 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px;
     font-weight: bold;
     color: var(--white-color);
     user-select: none;
     cursor: pointer;
+    text-decoration-line: underline;
+    text-underline-position: auto;
+    text-decoration-thickness: 10px;
+}
+
+.text-span {
+    display: inline;
+}
+
+.small {
+    font-size: calc(12px + 1.5vw);
+}
+
+.medium {
+    font-size: calc(12px + 2vw);
+}
+
+.large {
     font-size: calc(12px + 2.5vw);
+}
+
+.white {
+    color: var(--white-color);
+}
+
+.black {
+    color: var(--bg-color);
 }
 
 .total-amount {

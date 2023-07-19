@@ -16,12 +16,12 @@
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 10px;
-    color: var(--secondary-color);
+    color: var(--primary-color);
     text-transform: uppercase
 }
 
 .desc_item p{
-    color: var(--white-color);
+    color: var(--bg-color);
 }
   
 @media screen and (max-width: 980px) {

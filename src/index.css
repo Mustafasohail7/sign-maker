@@ -17,7 +17,8 @@ code {
   --primary-color: rgb(178,66,109);
   --secondary-color: rgb(40, 130, 240);
   --bg-color: #111111;
-  --white-color: #DCDCDC;
+  --white-color: #F5F5F5;
+  --white-bg-color: #F5F5F5;
   --primary-gradient: linear-gradient(to right, rgb(178, 66, 109) 0%, rgb(175, 64, 127) 50%, rgb(163, 40, 134) 100%);
   --secondary-gradient: linear-gradient(to right, rgb(40, 130, 240) 0%, rgb(38, 105, 240) 50%, rgb(35, 80, 240) 100%);
 }

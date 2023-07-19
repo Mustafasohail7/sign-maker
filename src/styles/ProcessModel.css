@@ -28,6 +28,7 @@
     width: 10%;
     padding: 10px;
     padding-right: 30px;
+    color: var(--white-color);
 }
   
 .process-image img {

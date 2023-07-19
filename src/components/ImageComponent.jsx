@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 // Stylesheet
 import '../styles/ImageComponent.css';
 
-const ImageComponent = ({userText,selectedImage}) => {
+const ImageComponent = ({userText,selectedImage,size,color}) => {
   const [textPosition, setTextPosition] = useState({ x: 0, y: 0 });
 
   const handleTextDrag = (e) => {
@@ -74,12 +74,14 @@ const ImageComponent = ({userText,selectedImage}) => {
     <div className="image-container" id='image-container'>
       <img src={selectedImage.src} alt="Your" className="image" />
       <div
-        className="text-overlay"
+        className={`text-overlay ${size} ${color}`}
         id="text-overlay"
         style={{ top: `${textPosition.y}px`, left: `${textPosition.x}px` }}
         onMouseDown={handleTextDrag}
       >
+        <span className='text-span'>
         {userText}
+        </span>
       </div>
       <div className="total-amount">Total $1337</div>
     </div>

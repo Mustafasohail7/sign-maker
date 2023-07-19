@@ -4,13 +4,14 @@
     justify-content: center;
     align-items: center;
     height: 20vh;
+    flex: 1;
 }
   
 .tagline {
-    font-size: calc(1.2rem + 1vw);
+    font-size: calc(1.4rem + 1vw);
     line-height: 1.2;
     text-align: center;
-    max-width: 80%;
+    width: 65%;
     word-break: break-word;
     text-transform: uppercase;
     margin-bottom: 10px;
@@ -19,7 +20,7 @@
 }
 
 .sub-tagline {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     word-break: break-word;
     text-transform: capitalize;
     line-height: 1.2;

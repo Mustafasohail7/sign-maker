@@ -5,7 +5,18 @@
     padding: 10px;
     color: var(--white-color);
     margin-bottom: 10px;
+    background-color: var(--bg-color);
 }
+
+.navbar.scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--primary-color);
+    transition: all 2s ease-in-out;
+}
+
 
 
 .main-flex-container {
@@ -48,8 +59,14 @@
 }
   
 .nav-item {
-    font-size: calc(1rem + ((1vw - 7.68px) * 0.6944));
+    font-size: calc(1rem + ((1vw - 4.68px) * 0.6944));
     cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s;
+}
+
+.nav-item:hover {
+    border-bottom-color: var(--primary-color);
 }
   
 .navbar-cart {

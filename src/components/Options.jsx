@@ -6,24 +6,19 @@ import '../styles/Options.css';
 //components
 import SectionContainer from './SectionContainer';
 
-const Options = () => {
+const Options = ({size,setSize,color,setColor}) => {
 
-  const [font, setFont] = useState('');
-  const [size, setSize] = useState('');
-  const [color,setColor] = useState('');
-  const [stand, setStand] = useState('');
+  const [stand, setStand] = useState(false);
   const [plug, setPlug] = useState(false);
+  const [plug2,setPlug2] = useState(false);
   const [wrap,setWrap] = useState(false);
-
-  const handleFontButton = (buttonId) => {
-    setFont(buttonId);
-  }
 
   const handleSizeButton = (buttonId) => {
     setSize(buttonId);
   }
 
   const handleColorButton = (buttonId) => {
+    console.log(buttonId)
     setColor(buttonId);
   }
 
@@ -50,26 +45,10 @@ const Options = () => {
     }
   },[])
 
-
-
   return (
     <>
     {wrap ? (
       <SectionContainer>
-      <div className="section">
-        <h2 className="section-heading">Choose Font</h2>
-        <div className="options">
-          <button 
-            className={`font-btn ${font === 'arial' ? 'selected' : ''}`}
-            onClick={() => handleFontButton('arial')}
-            >Arial</button>
-          <button 
-            className={`font-btn ${font === 'times-new-roman' ? 'selected' : ''}`}
-            onClick={() => handleFontButton('times-new-roman')}
-            >Times New Roman</button>
-        </div>
-      </div>
-
       <div className="section">
         <h2 className="section-heading">Choose Size</h2>
         <div className="options">
@@ -99,28 +78,18 @@ const Options = () => {
         <h2 className="section-heading">Choose Color</h2>
         <div className="options">
           <button 
-          className={`color-btn red ${color === 'color-btn red' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('color-btn red')}
+          className={`color-btn red ${color === 'red' ? 'selected' : ''}`}
+          onClick={() => {
+            handleColorButton('red')
+          }}
           >
             {/* red */}
           </button>
           <button
-          className={`color-btn yellow ${color === 'color-btn yellow' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('color-btn yellow')}
+          className={`color-btn yellow ${color === 'yellow' ? 'selected' : ''}`}
+          onClick={() => handleColorButton('yellow')}
           >
             {/* yellow */}
-          </button>
-          <button
-          className={`color-btn blue ${color === 'color-btn blue' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('color-btn blue')}
-          >
-            {/* blue */}
-          </button>
-          <button
-          className={`color-btn green ${color === 'color-btn green' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('color-btn green')}
-          >
-            {/* green */}
           </button>
         </div>
       </div>
@@ -163,20 +132,6 @@ const Options = () => {
     </SectionContainer>
     ) : (
       <div className='content-container'>
-        <div className="section">
-        <h2 className="section-heading">Choose Font</h2>
-        <div className="options">
-          <button 
-            className={`font-btn ${font === 'arial' ? 'selected' : ''}`}
-            onClick={() => handleFontButton('arial')}
-            >Arial</button>
-          <button 
-            className={`font-btn ${font === 'times-new-roman' ? 'selected' : ''}`}
-            onClick={() => handleFontButton('times-new-roman')}
-            >Times New Roman</button>
-        </div>
-      </div>
-
       <div className="section">
         <h2 className="section-heading">Choose Size</h2>
         <div className="options">
@@ -206,70 +161,60 @@ const Options = () => {
         <h2 className="section-heading">Choose Color</h2>
         <div className="options">
           <button 
-          className={`color-btn red ${color === 'color-btn red' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('color-btn red')}
+          className={`font-btn white ${color === 'white' ? 'selected' : ''}`}
+          onClick={() => handleColorButton('white')}
           >
-            {/* red */}
+            white
           </button>
           <button
-          className={`color-btn yellow ${color === 'color-btn yellow' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('color-btn yellow')}
+          className={`font-btn black ${color === 'black' ? 'selected' : ''}`}
+          onClick={() => handleColorButton('black')}
           >
-            {/* yellow */}
-          </button>
-          <button
-          className={`color-btn blue ${color === 'color-btn blue' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('color-btn blue')}
-          >
-            {/* blue */}
-          </button>
-          <button
-          className={`color-btn green ${color === 'color-btn green' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('color-btn green')}
-          >
-            {/* green */}
+            black
           </button>
         </div>
       </div>
 
       <div className="section">
-        <h2 className="section-heading">Choose Your Stand</h2>
         <div className="options">
           {/* Add your stand checkbox here */}
-          <button
-          className={`font-btn ${stand === 'stand1' ? 'selected' : ''}`}
-          onClick={() => handleStandButton('stand1')}
-          >
-            Stand 1
-          </button>
-          <button
-          className={`font-btn ${stand === 'stand2' ? 'selected' : ''}`}
-          onClick={() => handleStandButton('stand2')}
-          >
-            Stand 2
-          </button>
-        </div>
-      </div>
-
-      <div className="section">
-        <h2 className="section-heading">Plug Adapter</h2>
-        <div className="options">
-          {/* Add your radio buttons for plug adapter options here */}
+          <label className="checkbox-container">
+            <input
+              type="checkbox"
+              checked={stand}
+              onChange={() => setStand(!stand)}
+            />
+            <span className="checkmark"></span>
+            <span className="label-text">Include Stand</span>
+          </label>
           <label className="checkbox-container">
             <input
               type="checkbox"
               checked={plug}
-              onChange={() => setPlug(!plug)}
+              onChange={() => {
+                setPlug(!plug)
+                if(plug2 && !plug) setPlug2(false)
+              }}
             />
             <span className="checkmark"></span>
-            <span className="label-text">Include Plug Adapter</span>
+            <span className="label-text">Include Adapter</span>
           </label>
+          <label className="checkbox-container">
+            <input
+              type="checkbox"
+              checked={plug2}
+              onChange={() => {
+                setPlug2(!plug2)
+                if(plug && !plug2) setPlug(false)
+              }}
+            />
+            <span className="checkmark"></span>
+            <span className="label-text">Include Adapter (w/ xyz)</span>
+          </label>
+          <button className="cart-btn">ADD TO CART</button>
         </div>
-        <button className="cart-btn">ADD TO CART</button>
       </div>
 
-      <div className="section"> 
-      </div>
       </div>
     )}
     </>

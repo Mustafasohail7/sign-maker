@@ -8,7 +8,7 @@
     /* border: 1px solid #ddd; */
     border-radius: 10px;
     overflow-y: auto;
-    height: min(100vh,500px);
+    height: min(60vh,400px);
 }
 
 .section {
@@ -18,7 +18,8 @@
 .section-heading {
     text-align: center;
     font-size: 24px;
-    color: var(--white-color);
+    font-weight: 490;
+    color: var(--bg-color);
 }
 
 .font-btn{
@@ -38,58 +39,31 @@
 }
 
 .font-btn:hover{
-    box-shadow: rgb(0 0 0 / 20%) 0px 0px 0px 3px;
-    background: var(--secondary-gradient);
+    box-shadow: rgb(0 0 0 / 50%) 0px 0px 0px 3px;
+    background:  rgb(120, 20, 50);
 }
 
 .font-btn.selected{
-    background: var(--secondary-gradient);
+    background: rgb(120, 20, 50);
+    box-shadow: rgb(0 0 0 / 100%) 0px 0px 0px 3px;
 }
+
 
 .options {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
-.color-btn{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 3px solid transparent;
-    transition: border-color 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.color-btn.selected{
-    border-color: var(--primary-color);
-}
-
-.color-btn:hover{
-    border-color: var(--primary-color);
-}
-
-.color-btn.red{
-    background-color: red;
-}
-
-.color-btn.yellow{
-    background-color: yellow;
-}
-
-.color-btn.blue{
-    background-color: blue;
-}   
-
-.color-btn.green{
-    background-color: green;
-}
 
 .checkbox-container {
     display: flex;
     align-items: center;
     cursor: pointer;
+    justify-content: center;
+    width: 100%;
 }
   
 .checkbox-container input[type='checkbox'] {
@@ -108,11 +82,11 @@
 }
 
 .checkbox-container input[type='checkbox']:checked ~ .checkmark {
-    /* background-color: #f50057; */
     background-color: var(--primary-color);
 }
   
 .label-text {
+    color: var(--bg-color);
     font-size: 1.4rem;
 }
 
@@ -126,7 +100,7 @@
 }
 
 .cart-btn:hover{
-    background: var(--secondary-gradient);
+    background:  rgb(120, 20, 50);
 }
 
 .next-btn{
