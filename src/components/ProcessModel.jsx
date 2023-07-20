@@ -1,46 +1,82 @@
-import { AiOutlineDesktop, AiOutlineFontColors } from 'react-icons/ai'
-import { BsPalette, BsBodyText, BsFillCartCheckFill } from 'react-icons/bs'
+import { useState,useEffect, useRef } from 'react';
 
 //stylesheet
 import '../styles/ProcessModel.css';
 
-const ProcessModel = () => {
-  const processData = [
-    {
-      image: <AiOutlineDesktop size={30}/>,
-      text: 'Enter the text you want on your sign',
-    },
-    {
-      image: <BsPalette size={30}/>,
-      text: 'Choose a font and color',
-    },
-    {
-      image: <AiOutlineFontColors size={30}/>,
-      text: 'Choose a size',
-    },
-    {
-      image: <BsBodyText size={30}/>,
-      text: 'Choose a backboard style',
-    },
-    {
-      image: <BsFillCartCheckFill size={30}/>,
-      text: 'Add to your cart and checkout',
-    },
-    // Add more process data as needed
-  ];
+import processData from '../data/processData'
+
+const ProcessModel = ({shrink,setShrink}) => {
+
+  const [selectedProcess, setSelectedProcess] = useState(3);
+  // const [processState, setProcessState] = useState(processData);
+  const processState = processData
+
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+      const container = containerRef.current;
+      const numLogos = processState.length;
+      const radius = container.clientHeight * 0.4; // Adjust the radius as needed
+
+      processState.forEach((logo, index) => {
+        const angle = (index / numLogos) * 360;
+        const posX = radius * Math.cos((angle * Math.PI) / 180);
+        const posY = radius * Math.sin((angle * Math.PI) / 180);
+
+        const logoElement = container.children[index + 1]; // Index 0 is the text
+        logoElement.style.transform = `translate(${posX}px, ${posY}px)`;
+      });
+  }, [processState]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+        // Increment the selected component and loop back to 1 if it exceeds 5
+        const nextSelected = selectedProcess === 5 ? 1 : selectedProcess + 1;
+        setSelectedProcess(nextSelected);
+    }, 2000); // Change state every 5 seconds (adjust as needed)
+
+    return () => {
+      clearInterval(interval); // Clean up the interval on unmount
+    };
+  })
+
+  useEffect(() => {
+    window.addEventListener('resize',handleResize)
+
+    return () => {
+        window.removeEventListener('resize',handleResize)
+    }
+  })
+
+  const handleResize = () => {
+    if(window.innerWidth > 768) {
+        setShrink(false)
+    }else{
+        setShrink(true)
+    }
+  }
+
 
   return (
-    <div className="process-model">
-      {processData.map((step, index) => (
-        <div className="process-box" key={index}>
-          <div className="process-image">
-            {step.image }
-          </div>
-          <div className="process-text">
-            <span>{step.text}</span>
-          </div>
+    <div className={`process-model ${shrink ? "shrink" : ""}`}>
+      <div className="process-steps" ref={containerRef}>
+        <div className='process-text-item'>
+              <>
+              {processState[selectedProcess - 1].image}
+              </>
+              <h2>{processState[selectedProcess - 1].title}</h2>
+              <p>{processState[selectedProcess - 1].text}</p>
         </div>
-      ))}
+        {processState.map((step) => (
+          <div
+            key={step.id}
+            className={`process-step ${selectedProcess === step.id ? "selected" : ""}`}
+            onClick={() => setSelectedProcess(step.id)}
+          >
+            {step.image}
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

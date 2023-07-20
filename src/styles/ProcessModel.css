@@ -1,69 +1,71 @@
 .process-model {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.process-model.shrink{
+    height: 0px;
+    overflow: hidden;
+}
+  
+.process-steps {
+    position: relative;
+    width: 100%; /* Adjust the container width as needed */
+    height: 600px; 
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 90%;
+    overflow: hidden;
     margin: 0 auto;
-    gap: 10px;
-    margin-bottom: 50px;
 }
   
-.process-box {
-    display: flex;
-    align-items: center;
-    width: 40%;
-    height: 75px;
-    transition: transform 0.7s ease;
-    margin-bottom: 5px;
+.process-step {
+    position: absolute;
+    transition: all 0.5s ease-in-out;
     background-color: var(--primary-color);
-    /* background: var(--primary-gradient); */
-}
-  
-.process-box:hover {
-    transform: scale(1.1);
-}
-  
-.process-image {
-    width: 10%;
-    padding: 10px;
-    padding-right: 30px;
+    padding: 20px;
+    border-radius: 50%;
     color: var(--white-color);
+    cursor: pointer;
 }
-  
-.process-image img {
-    width: 100%;
+
+.process-step:hover {
+    background-color: rgb(120, 20, 50);
 }
-  
-.process-text {
-    flex-grow: 1;
+
+.process-step.selected {
+    background-color: rgb(120, 20, 50);
+    box-shadow: rgb(0 0 0 / 100%) 0px 0px 0px 3px;
+}
+
+.process-text-item{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    color: var(--white-color);
-    font-size: calc(15px + 0.4vw);
+    flex-direction: column;
+    position: absolute;
+    font-size: 2rem;
     font-weight: bold;
+    align-items: center;
+    color: var(--primary-color);
+    width: 50%;
 }
 
-@media screen and (max-width: 768px) {
-    .process-box {
-        height: 100px;
-        width: 45%;
+.process-text-item p{
+    font-size: 1.5rem;
+    color: var(--bg-color);
+    text-align: center;
+}
+
+@media screen and (max-width: 1150px) {
+    .process-model {
+        width: 80%;
     }
+}
+
+@media screen and (max-width: 940px) {
     .process-model {
         width: 100%;
     }
 }
-
-@media screen and (max-width: 380px) {
-    .process-box {
-        height: 150px;
-    }
-    .process-model {
-        width: 100%;
-    }
-}
-
-
   

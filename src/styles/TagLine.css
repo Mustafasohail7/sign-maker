@@ -5,10 +5,11 @@
     align-items: center;
     height: 20vh;
     flex: 1;
+    margin-top: 20px;
 }
   
 .tagline {
-    font-size: calc(1.4rem + 1vw);
+    font-size: calc(2rem + 1vw);
     line-height: 1.2;
     text-align: center;
     width: 65%;
@@ -16,7 +17,9 @@
     text-transform: uppercase;
     margin-bottom: 10px;
     color: var(--primary-color);
-    font-weight: 500;
+    font-weight: bold;
+    letter-spacing: 8px;
+    text-shadow: 6px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .sub-tagline {

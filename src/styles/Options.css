@@ -5,10 +5,9 @@
     align-items: center;
     gap: 20px;
     height: 100%;
-    /* border: 1px solid #ddd; */
     border-radius: 10px;
     overflow-y: auto;
-    height: min(60vh,400px);
+    height: min(80vh,530px);
 }
 
 .section {
@@ -17,25 +16,26 @@
 
 .section-heading {
     text-align: center;
-    font-size: 24px;
-    font-weight: 490;
+    font-size: 1.5em;
+    font-weight: 500;
     color: var(--bg-color);
+    letter-spacing: 2px;
+    text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
 }
 
 .font-btn{
-    display: inline-block;
-    outline: none;
     cursor: pointer;
     font-size: 1rem;
     line-height: 20px;
     font-weight: 600;
     border-radius: 8px;
     padding: 14px 24px;
-    border: none;
     transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
-    /* background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%); */
     background: var(--primary-gradient);
     color: var(--white-color);
+    width: 40%;
+    text-transform: capitalize;
 }
 
 .font-btn:hover{
@@ -48,13 +48,29 @@
     box-shadow: rgb(0 0 0 / 100%) 0px 0px 0px 3px;
 }
 
+.cart-btn{
+    width: 90%;
+    background: var(--primary-gradient);
+    border-radius: 8px;
+    padding: 14px 24px;
+    line-height: 25px;
+    color: var(--white-color);
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.cart-btn:hover{
+    background:  rgb(120, 20, 50);
+}
 
 .options {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    width: 100%;
 }
 
 
@@ -90,19 +106,6 @@
     font-size: 1.4rem;
 }
 
-.cart-btn{
-    width: 100%;
-    background: var(--primary-gradient);
-    border-radius: 5px;
-    border: 2px solid transparent;
-    height: 50px;
-    color: var(--white-color);
-}
-
-.cart-btn:hover{
-    background:  rgb(120, 20, 50);
-}
-
 .next-btn{
     background-color: #f50057;
     border-radius: 5px;
@@ -112,6 +115,75 @@
 .next-btn.disabled{
     background-color: #ccc;
 }
+
+/* bruh */
+
+.checkbox-holder{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+
+.checkbox-item{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    text-shadow: 4px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.checkbox-toggle {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background-color: #dcdcdc;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: 1px solid var(--primary-color);
+  }
+  
+  .checkbox-toggle.checked {
+    background-color: var(--primary-color);
+  }
+  
+  .slider {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: left 0.3s ease;
+  }
+  
+  .checkbox-toggle.checked .slider {
+    left: 32px;
+  }
+  
+  .slider-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #fff;
+    height: 100%;
+  }
+  
+  input[type='checkbox'] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
 
 @media (max-width: 980px) {
     .content-container {
@@ -124,6 +196,14 @@
   
     .section {
       flex: 1;
+    }
+    
+    .checkbox-holder {
+        align-items: flex-start;
+    }
+
+    .cart-btn {
+        width: 100%;
     }
   
     .section-heading {

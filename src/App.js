@@ -6,7 +6,7 @@ import { Element } from 'react-scroll'
 import './styles/App.css'
 
 //images
-import coffee from './assets/coffee.avif'
+import Xmas from './assets/Xmas.jpg'
 
 //components
 import NavBar from './components/NavBar'
@@ -25,14 +25,18 @@ import TagLine3 from './components/TagLine3'
 import DescriptionText from './components/DescriptionText'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
-import StickyNavbar from './components/StickyNavbar'
+import SocialLinks from './components/SocialLinks'
+import ChatHead from './components/ChatHead' 
+import ProcessText from './components/ProcessText'
+import HomeIcon from './components/HomeIcon'
+import ProcessModelList from './components/ProcessModelList'
 
 function App() {
 
   const [dropDown,setDropDown] = useState(false)
-  const [sticky,setSticky] = useState(false)
+  const [shrink,setShrink] = useState(false)
   // const [selectedImage,setSelectedImage] = useState({id: 2, title: "Coffee Shop" ,src: coffee})
-  const selectedImage = {id: 2, title: "Coffee Shop" ,src: coffee}
+  const selectedImage = {id: 2, title: "Coffee Shop" ,src: Xmas}
   const [userText,setUserText] = useState('Drag Me')
   const [size, setSize] = useState('small');
   const [color,setColor] = useState('red');
@@ -45,19 +49,22 @@ function App() {
             bg: 'white',
           }
         }
-      }
+      },
     })}>
-      <NavBar dropDown={dropDown} setDropDown={setDropDown} setSticky={setSticky} />
+      <SocialLinks/>
+      <ChatHead/>
+      <HomeIcon/>
+      <Element name='home'>
+        <NavBar setDropDown={setDropDown} />
+      </Element>
       <DropDown dropDown={dropDown} setDropDown={setDropDown}/>
-      <StickyNavbar sticky={sticky} setSticky={setSticky}/>
       <div className="component">
         <TagLine/>
         <TextPreviewer setUserText={setUserText} />
       </div>
       <div className="function-container">
-        <div className='component-left' >
+        <div className="component-left">
           <ImageComponent userText={userText} selectedImage={selectedImage} size={size} color={color}/>
-          {/* <ImageSelector selectedImage={selectedImage} setSelectedImage={setSelectedImage} /> */}
         </div>
         <div className='component-right' >
           <Options size={size} setSize={setSize} color={color} setColor={setColor}/>
@@ -65,7 +72,11 @@ function App() {
       </div>
       <TagLine2/>
       <VideoPlayer/>
-      <ProcessModel/>
+      <div className='process-container'>
+        <ProcessModel shrink={shrink} setShrink={setShrink} />
+        <ProcessText/>
+        {shrink && <ProcessModelList shrink={shrink} />}
+      </div>
       <Element name='portfolio'>
         <PortfolioGrid/>
       </Element>
@@ -78,7 +89,7 @@ function App() {
         <DescriptionText/>
       </Element>
       {/* <Graphic/> */}
-      <div className="static-bg-1"/>
+      <div className="static-bg-2"/>
       <Element name='faq'>
         <FAQ/>
       </Element>

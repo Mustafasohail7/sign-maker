@@ -6,7 +6,8 @@
     margin-left: 5%;
     margin-right: 5%;
     place-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .feature-grid-item{
@@ -35,7 +36,7 @@
 }
 
 .feature-grid-item:hover{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 16px 16px 0 rgba(0,0,0,1);
 }
 
 @media screen and (max-width: 768px) {

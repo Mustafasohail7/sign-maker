@@ -8,17 +8,6 @@
     background-color: var(--bg-color);
 }
 
-.navbar.scrolled{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: var(--primary-color);
-    transition: all 2s ease-in-out;
-}
-
-
-
 .main-flex-container {
     width: 100%;
     display: flex;
@@ -59,10 +48,13 @@
 }
   
 .nav-item {
-    font-size: calc(1rem + ((1vw - 4.68px) * 0.6944));
+    font-family: var(--primary-font);
+    font-size: calc(1rem + ((1vw - 10.68px) * 0.6944));
     cursor: pointer;
     border-bottom: 2px solid transparent;
     transition: border-bottom-color 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav-item:hover {

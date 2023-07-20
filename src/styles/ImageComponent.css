@@ -6,7 +6,8 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 100%;
+    height: min(80vh,530px);
+    overflow: hidden;
 }
   
 .image {
@@ -42,6 +43,10 @@
 
 .large {
     font-size: calc(12px + 2.5vw);
+}
+
+.extra-large {
+    font-size: calc(12px + 3vw);
 }
 
 .white {
