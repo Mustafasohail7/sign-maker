@@ -1,4 +1,4 @@
-import '../styles/ProcessText.css'
+import '../../styles/ProcessText.css'
 
 const ProcessText = () => {
   return (

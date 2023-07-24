@@ -1,4 +1,4 @@
-import '../styles/TagLine.css'
+import '../../styles/TagLine.css'
 
 const TagLine = () => {
   return (

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 //stylesheet
-import '../styles/TextPreviewer.css'
+import '../../styles/TextPreviewer.css'
 
 const TextPreviewer = ({setUserText}) => {
 

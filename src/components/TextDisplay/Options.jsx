@@ -2,26 +2,33 @@ import { useState, useLayoutEffect } from 'react';
 import { AiOutlineCheck } from 'react-icons/ai';
 
 //stylesheet
-import '../styles/Options.css';
+import '../../styles/Options.css';
 
 //components
 import SectionContainer from './SectionContainer';
+import SizeButton from './SizeButton';
+import ColorButton from './ColorButton';
 
 const Options = ({size,setSize,color,setColor}) => {
+
+  const SizeData = [
+    {id: 1, name: 'small'},
+    {id: 2, name: 'medium'},
+    {id: 3, name: 'large'},
+    {id: 4, name: 'extra-large'},
+  ]
+
+  const ColorData = [
+    {id: 1, name: 'white'},
+    {id: 2, name: 'black'},
+  ]
 
   const [stand, setStand] = useState(false);
   const [plug, setPlug] = useState(false);
   const [plug2,setPlug2] = useState(false);
   const [wrap,setWrap] = useState(false);
-
-  const handleSizeButton = (buttonId) => {
-    setSize(buttonId);
-  }
-
-  const handleColorButton = (buttonId) => {
-    setColor(buttonId);
-  }
   
+  //change section layout
   const handleSection = () => {
     if(window.innerWidth > 980) {
       setWrap(false);
@@ -30,20 +37,24 @@ const Options = ({size,setSize,color,setColor}) => {
     }
   }
 
+  //toggle stand
   const handleStandToggle = () => {
     setStand(!stand);
   }
 
+  //toggle plug
   const handlePlugToggle = () => {
     setPlug(!plug)
     if(plug2 && !plug) setPlug2(false)
   }
   
+  //toggle plug2
   const handlePlugTwoToggle = () => {
     setPlug2(!plug2)
     if(plug && !plug2) setPlug(false)
   }
 
+  //resize event listener
   useLayoutEffect(() => {
 
     handleSection();
@@ -63,30 +74,9 @@ const Options = ({size,setSize,color,setColor}) => {
       <div className="section">
         <h2 className="section-heading">Choose Size</h2>
         <div className="options">
-          <button
-          className={`font-btn ${size === 'small' ? 'selected' : ''}`}
-          onClick={() => handleSizeButton('small')}
-          >
-            small
-          </button>
-          <button
-          className={`font-btn ${size === 'medium' ? 'selected' : ''}`}
-          onClick={() => handleSizeButton('medium')}
-          >
-            medium
-          </button>
-          <button
-          className={`font-btn ${size === 'large' ? 'selected' : ''}`}
-          onClick={() => handleSizeButton('large')}
-          >
-            large
-          </button>
-          <button 
-          className={`font-btn ${size === 'extra-large' ? 'selected' : ''}`}
-          onClick={() => handleSizeButton('extra-large')}
-          >
-            Extra Large
-          </button>
+          {SizeData.map((sizeData) => (
+            <SizeButton key={sizeData.id} size={size} setSize={setSize} name={sizeData.name} />
+          ))}
         </div>
 
       </div>
@@ -94,18 +84,9 @@ const Options = ({size,setSize,color,setColor}) => {
       <div className="section">
         <h2 className="section-heading">Choose Color</h2>
         <div className="options">
-        <button 
-          className={`font-btn white ${color === 'white' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('white')}
-          >
-            white
-          </button>
-          <button
-          className={`font-btn black ${color === 'black' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('black')}
-          >
-            black
-          </button>
+          {ColorData.map((colorData) => (
+            <ColorButton key={colorData.id} color={color} setColor={setColor} name={colorData.name} />
+          ))}
         </div>
       </div>
 
@@ -155,30 +136,9 @@ const Options = ({size,setSize,color,setColor}) => {
       <div className="section">
         <h2 className="section-heading">Choose Size</h2>
         <div className="options">
-          <button
-          className={`font-btn ${size === 'small' ? 'selected' : ''}`}
-          onClick={() => handleSizeButton('small')}
-          >
-            small
-          </button>
-          <button
-          className={`font-btn ${size === 'medium' ? 'selected' : ''}`}
-          onClick={() => handleSizeButton('medium')}
-          >
-            medium
-          </button>
-          <button
-          className={`font-btn ${size === 'large' ? 'selected' : ''}`}
-          onClick={() => handleSizeButton('large')}
-          >
-            large
-          </button>
-          <button
-          className={`font-btn ${size === 'extra-large' ? 'selected' : ''}`}
-          onClick={() => handleSizeButton('extra-large')}
-          >
-            Extra Large
-          </button>
+          {SizeData.map((sizeData) => (
+            <SizeButton key={sizeData.id} size={size} setSize={setSize} name={sizeData.name} />
+          ))}
         </div>
 
       </div>
@@ -186,18 +146,9 @@ const Options = ({size,setSize,color,setColor}) => {
       <div className="section">
         <h2 className="section-heading">Choose Color</h2>
         <div className="options">
-          <button 
-          className={`font-btn white ${color === 'white' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('white')}
-          >
-            white
-          </button>
-          <button
-          className={`font-btn black ${color === 'black' ? 'selected' : ''}`}
-          onClick={() => handleColorButton('black')}
-          >
-            black
-          </button>
+          {ColorData.map((colorData) => (
+            <ColorButton key={colorData.id} color={color} setColor={setColor} name={colorData.name} />
+          ))}
         </div>
       </div>
 

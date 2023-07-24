@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 
 // Stylesheet
-import '../styles/ImageComponent.css';
+import '../../styles/ImageComponent.css';
 
 const ImageComponent = ({userText,selectedImage,size,color}) => {
+
   const [textPosition, setTextPosition] = useState({ x: 0, y: 0 });
 
+  // Handle text dragging
   const handleTextDrag = (e) => {
     e.preventDefault();
 
@@ -42,6 +44,7 @@ const ImageComponent = ({userText,selectedImage,size,color}) => {
     document.addEventListener('mouseup', handleMouseUp);
   };
 
+  // Handle text sticking to image when resizing
   useEffect(() => {
     const handleResize = () => {
       const container = document.getElementById('image-container');

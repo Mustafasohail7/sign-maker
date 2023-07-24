@@ -1,32 +1,3 @@
-.function-container {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-}
-
-.component {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.component-left{
-  flex: 70%;
-}
-
-.component-right{
-  flex: 30%;
-  overflow-y: auto;
-}
-
-.process-container{
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
 .static-bg-1{
   height: 75vh;
   background: #fff url("../assets/Xmas.jpg") center center/cover no-repeat fixed;
@@ -38,22 +9,6 @@
 }
 
 
-@media screen and (max-width: 980px) {
-    .function-container {
-      flex-direction: column;
-    }
-    .component-left {
-      width: 100%;
-    }
-    .component-right{
-      width: 100%;
-      margin-bottom: 30px;
-    }
-}
 
-@media screen and (max-width: 940px) {
-  .process-container {
-      flex-direction: column;
-  }
-}
+
   
