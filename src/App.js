@@ -7,6 +7,7 @@ import './styles/App.css'
 
 //components
 import Header from './components/Header'
+import TagLine from './components/TagLine'
 import TextDisplay from './components/TextDisplay'
 import TagLine2 from './components/TagLine2'
 import VideoPlayer from './components/VideoPlayer'
@@ -17,8 +18,6 @@ import TagLine3 from './components/TagLine3'
 import DescriptionText from './components/Description_Text/DescriptionText'
 import FAQ from './components/FAQ/FAQ'
 import Footer from './components/Footer/Footer'
-import SocialLinks from './components/Social_Links/SocialLinks'
-import ChatHead from './components/ChatHead' 
 import HomeIcon from './components/HomeIcon'
 
 function App() {
@@ -28,17 +27,16 @@ function App() {
       styles: {
         global: {
           body: {
-            bg: 'white',
+            bg: '#111111',
           }
         }
       },
     })}>
-      <SocialLinks/>
-      <ChatHead/>
       <HomeIcon/>
       <Element name='home'>
         <Header/>
       </Element>
+      <TagLine/>
       <TextDisplay />
       <TagLine2/>
       <VideoPlayer/>

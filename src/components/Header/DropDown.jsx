@@ -7,7 +7,6 @@ import DropDownItem from './DropDownItem'
 const DropDown = ({dropDown,setDropDown}) => {
 
   return (
-    <>
     <div className={`navbar-dropdown ${dropDown ? 'open' : ''}`}>
         <ul className="navbar-options-dropdown">
             {NavBarData.map((navbarItem) => (
@@ -15,7 +14,6 @@ const DropDown = ({dropDown,setDropDown}) => {
             ))}
         </ul>
     </div>
-    </>
   )
 }
 

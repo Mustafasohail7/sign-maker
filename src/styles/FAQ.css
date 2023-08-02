@@ -5,7 +5,7 @@
   
 .faq-heading {
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: var(--bg-color);
     font-weight: 700;
     font-size: 2.5rem;
 }
@@ -50,7 +50,7 @@
 }
 
 .caret-btn{
-    color: var(--primary-color);
+    color: var(--bg-color);
 }
 
 .caret-btn.rotate {

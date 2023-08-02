@@ -16,7 +16,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     margin-bottom: 10px;
-    color: var(--primary-color);
+    color: var(--bg-color);
     text-transform: uppercase
 }
 

@@ -1,5 +1,5 @@
 .footer-container {
-    background-color: var(--primary-color);
+    background-color: var(--bg-color);
     padding-top: 20px;
     text-align: center;
     color: var(--white-color);
@@ -29,6 +29,15 @@
 .footer-item{
     width: 30%;
     text-align: left;
+    text-decoration-color: var(--primary-color);
+    transition: text-decoration 0.3s;
+}
+
+.footer-item:hover{
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-color: var(--primary-color);
+    cursor: pointer;
 }
 
 .footer-copyright{

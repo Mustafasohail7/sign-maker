@@ -1,0 +1,17 @@
+.options.size{
+    justify-content: center;
+}
+
+.size-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24%;
+    background-color: yellow;
+}
+
+.size-btn-column{
+    display: flex;
+    flex-direction: column;
+    background-color: #f50057;
+}

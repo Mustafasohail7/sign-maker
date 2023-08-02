@@ -1,0 +1,22 @@
+.column-divider {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-section {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-option {
+    display: flex;
+    justify-content: space-between;
+}
