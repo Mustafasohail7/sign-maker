@@ -9,7 +9,6 @@ import './styles/App.css'
 import Header from './components/Header'
 import TagLine from './components/TagLine'
 import TextDisplay from './components/TextDisplay'
-import TagLine2 from './components/TagLine2'
 import VideoPlayer from './components/VideoPlayer'
 import ProcessModelMain from './components/ProcessModelMain'
 import PortfolioGrid from './components/Portfolio_Grid/PortfolioGrid'
@@ -38,7 +37,6 @@ function App() {
       </Element>
       <TagLine/>
       <TextDisplay />
-      {/* <TagLine2/> */}
       <VideoPlayer/>
       <ProcessModelMain />
       <Element name='portfolio'>
