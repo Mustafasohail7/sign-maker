@@ -1,16 +1,28 @@
 .add-to-cart {
-    background-color: var(--primary-color);
     width: 60%;
     margin: 0 auto;
-    padding: 20px 10px;
+    margin-bottom: 30px;
     text-align: center;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-left{
+    width: 70%;
+    background-color: var(--primary-color);
+    padding: 16px 10px;
+}
+
+.cart-right{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--white-color);
+    padding: 20px 10px;
 }
 
 .cart-text {
-    width: 70%;
+    text-transform: uppercase;
 }
 
-.cart-logo {
-    width: 30%;
-}

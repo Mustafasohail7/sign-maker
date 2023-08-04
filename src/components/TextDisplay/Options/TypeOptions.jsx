@@ -2,7 +2,7 @@ import TypeOptionItem from './TypeOptionItem'
 
 import '../../../styles/TypeOptions.css'
 
-const TypeOptions = ({size,setSize}) => {
+const TypeOptions = ({type,setType}) => {
 
     const TypeData = [
         {id: 1, name: 'letters'},
@@ -16,7 +16,7 @@ const TypeOptions = ({size,setSize}) => {
             <h2 className="section-heading">Choose Type:</h2>
             <div className="options">
             {TypeData.map((sizeData) => (
-                <TypeOptionItem key={sizeData.id} size={size} setSize={setSize} name={sizeData.name} />
+                <TypeOptionItem key={sizeData.id} type={type} setType={setType} name={sizeData.name} />
             ))}
             </div>
         </div>

@@ -45,6 +45,7 @@ const ProcessModel = ({shrink,setShrink}) => {
 
   // Resize event listener
   useEffect(() => {
+    handleResize()
     window.addEventListener('resize',handleResize)
 
     return () => {

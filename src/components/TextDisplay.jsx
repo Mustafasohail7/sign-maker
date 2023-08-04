@@ -10,20 +10,23 @@ import ImageSelector from './TextDisplay/ImageSelector'
 
 import '../styles/TextDisplay.css'
 
+import adapterImage from '../assets/ZZadapter.png'
+
 const TextDisplay = () => {
 
+    const adapter = {src:adapterImage,title:'adapter'}
+
     const [selectedImage,setSelectedImage] = useState(imageData[0]) 
-    const [size, setSize] = useState('small');
-    const [color,setColor] = useState('red');
+    const [signImages,setSignImages] = useState([adapter])
 
   return (
     <div className="function-container">
         <div className="component-left">
-          <ImageComponent selectedImage={selectedImage} size={size} color={color}/>
+          <ImageComponent selectedImage={selectedImage} signImages={signImages}/>
         </div>
         <div className='component-right' >
-          <ImageSelector setSelectedImage={setSelectedImage} />
-          <Options size={size} setSize={setSize} color={color} setColor={setColor}/>
+          <ImageSelector setSelectedImage={setSelectedImage}/>
+          <Options signImages={signImages} setSignImages={setSignImages}/>
         </div>
     </div>
   )

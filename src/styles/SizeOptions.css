@@ -1,17 +1,44 @@
 .options.size{
     justify-content: center;
+    gap: 2%;
 }
 
 .size-btn{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 24%;
-    background-color: yellow;
+    width: 23%;
+    background-color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.size-btn.selected{
+    border: 1px solid var(--white-color);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.size-btn-A{
+    width: 40%;
+    color: var(--white-color);
+    font-weight: bold;
 }
 
 .size-btn-column{
+    font-size: 1rem;
     display: flex;
     flex-direction: column;
-    background-color: #f50057;
+    background-color: var(--white-color);
+    width: 60%;
 }
+
+.size-btn-column.selected{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-weight: bold;
+}
+/* 
+@media screen and (max-width: 980px) {
+    .size-btn{
+        width: 30%;
+    }
+} */

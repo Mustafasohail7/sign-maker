@@ -15,7 +15,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(178, 66, 109, 0.4);
+    box-shadow: 0 8px 12px 0 rgb(0,0,0);
     transition: 0.3s;
     border-radius: 5px;
     padding: 15px;
@@ -36,7 +36,7 @@
 }
 
 .feature-grid-item:hover{
-    box-shadow: 0 8px 12px 0 rgb(0,0,0);
+    box-shadow: 0 4px 4px 0 rgba(178, 66, 109, 0.4);
 }
 
 @media screen and (max-width: 768px) {

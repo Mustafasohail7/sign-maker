@@ -6,12 +6,13 @@
 
 
 .component-left{
-  flex: 70%;
+  flex: 60%;
 }
 
 .component-right{
-  flex: 30%;
+  flex: 40%;
   overflow-y: auto;
+  height: min(70vh,460px);
 }
 
 
@@ -22,11 +23,11 @@
     .component-left {
       width: 90%;
       margin: 0 auto;
-      height: min(50vh, 400px);
     }
     .component-right{
       width: 100%;
       margin-bottom: 30px;
+      overflow: hidden;
     }
 }
   

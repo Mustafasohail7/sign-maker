@@ -1,15 +1,14 @@
 import React from 'react'
 
-const TypeOptionItem = ({size,setSize,name}) => {
+const TypeOptionItem = ({type,setType,name}) => {
 
     const handleSizeButton = (buttonId) => {
-        console.log(buttonId)
-        setSize(buttonId);
+        setType(buttonId);
     }
 
   return (
     <button
-    className={`type-btn ${size === `${name}` ? 'selected' : ''}`}
+    className={`type-btn ${type === `${name}` ? 'selected' : ''}`}
     onClick={() => handleSizeButton(name)}
     >
         {name}

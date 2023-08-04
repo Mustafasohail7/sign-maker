@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect } from 'react';
+import { useState } from 'react';
 
 //stylesheet
 import '../../styles/Options.css';
@@ -10,36 +10,18 @@ import ColorOptions from './Options/ColorOptions';
 import SizeOptions from './Options/SizeOptions';
 import RadioOptions from './Options/RadioOptions';
 import Cart from './Options/Cart';
+import ClearButtons from './Options/ClearButtons';
 
-const Options = ({size,setSize,color,setColor}) => {
+const Options = ({signImages,setSignImages}) => {
 
-  const [wrap,setWrap] = useState(false);
-  
-  //change section layout
-  const handleSection = () => {
-    if(window.innerWidth > 980) {
-      setWrap(false);
-    } else {
-      setWrap(true);
-    }
-  }
-  //resize event listener
-  useLayoutEffect(() => {
-
-    handleSection();
-
-    window.addEventListener('resize',handleSection)
-
-    return () => {
-        window.removeEventListener('resize',handleSection)
-    }
-  },[])
+  const [type,setType] = useState('letters');
 
   return (
     <div className='content-container'>
 
-      <TypeOptions size={size} setSize={setSize} />
-      <Letters/>
+      <ClearButtons signImages={signImages} setSignImages={setSignImages}/>
+      <TypeOptions type={type} setType={setType} />
+      <Letters type={type} setSignImages={setSignImages} />
       <ColorOptions/>
       <SizeOptions/>
       <RadioOptions/>

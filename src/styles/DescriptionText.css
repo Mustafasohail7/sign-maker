@@ -10,18 +10,18 @@
     margin-bottom: 20px;
     width: 40%;
     padding: 10px;
+    font-family: var(--primary-font);
 }
 
 .desc_item h3{
     font-size: 1.5rem;
-    font-weight: 500;
     margin-bottom: 10px;
-    color: var(--bg-color);
-    text-transform: uppercase
+    color: var(--white-color);
+    text-transform: uppercase;
 }
 
 .desc_item p{
-    color: var(--bg-color);
+    color: var(--white-color);
 }
   
 @media screen and (max-width: 980px) {

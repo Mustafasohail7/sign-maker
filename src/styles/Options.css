@@ -4,13 +4,11 @@
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
-    height: 100%;
-    border-radius: 10px;
-    overflow-y: auto;
-    /* height: min(80vh,530px); */
 }
 
 .section {
+    width: 90%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,6 +22,7 @@
     font-size: 1.5em;
     color: var(--white-color);
     text-transform: capitalize;
+    margin-bottom: 10px;
 }
 
 .options {

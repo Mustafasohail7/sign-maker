@@ -5,15 +5,14 @@
 .letter-container{
     display: flex;
     flex-direction: column;
-    gap: 2px;
     justify-content: center;
     align-items: center;
-    width: 10%;
+    width: 15%;
+    gap:1px;
+    margin-bottom: 5px;
 }
 
 .option-images {
-    /* width: 2em;
-    height: 2em; */
     background-color: var(--white-color);
 }
 
@@ -22,4 +21,22 @@
     background-color: gray;
     width: 100%;
     border-radius: 3px;
+}
+
+.plus-image:hover{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 980px) {
+    .letter-container{
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 668px) {
+    .letter-container{
+        width: 15%;
+    }
 }

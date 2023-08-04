@@ -38,7 +38,7 @@ function App() {
       </Element>
       <TagLine/>
       <TextDisplay />
-      <TagLine2/>
+      {/* <TagLine2/> */}
       <VideoPlayer/>
       <ProcessModelMain />
       <Element name='portfolio'>

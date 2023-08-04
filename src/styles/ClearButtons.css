@@ -1,0 +1,35 @@
+.delete-container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.delete-container-item{
+    display: flex;
+    background-color: var(--primary-color);
+    padding: 10px 10px;
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: border 0.2s ease-in;
+}
+
+.delete-container-item.disabled{
+    background-color: gray;
+}
+
+.delete-container-item:hover{
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.clear-last-btn{
+    text-transform: capitalize;
+}
+
+
+.clear-all-btn{
+    text-transform: capitalize;
+}
