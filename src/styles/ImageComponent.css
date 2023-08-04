@@ -32,6 +32,10 @@
     margin-bottom: 10px;
 }
 
+.letter.slim{
+    width: 30px;
+}
+
 .adapter{
     width: 60px;
     height: 31px;
@@ -55,6 +59,9 @@
         height: 24px;
         width: 60px;
     }
+    .letter.slim{
+        width: 24px;
+    }
 }
 
 @media screen and (max-width: 746px) {
@@ -69,6 +76,9 @@
     .adapter{
         height: 18px;
         width: 45px;
+    }
+    .letter.slim{
+        width: 18px;
     }
 }
 

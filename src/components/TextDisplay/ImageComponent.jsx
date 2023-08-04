@@ -12,7 +12,8 @@ const ImageComponent = ({selectedImage,signImages}) => {
           return <img key={1000} src={signImage.src} alt={signImages.title} className='adapter'
           />
         }
-        return <img key={signImage.id} src={signImage.src} alt={signImages.title} className='letter'
+        return <img key={signImage.id} src={signImage.src} alt={signImages.title} 
+          className={`letter ${signImage.title==='I' || signImage.title==='one' ? 'slim' : ''}`}
         />
       })}
       </div>
