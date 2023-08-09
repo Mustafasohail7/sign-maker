@@ -11,8 +11,14 @@
 
 .component-right{
   flex: 40%;
-  overflow-y: auto;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
   height: min(70vh,460px);
+}
+
+.component-right::-webkit-scrollbar{
+  display: none;
 }
 
 

@@ -12,7 +12,7 @@ import Order from '../assets/portfolio/Order.jpg'
 import ShoesTilted from '../assets/portfolio/Shoes_tilted.JPG'
 import Shakes from '../assets/portfolio/Shakes.jpg'
 import VIPStand from '../assets/portfolio/VIP-stand.png'
-import Xmas from '../assets/portfolio/Xmas.jpg'
+import OpelSign from '../assets/portfolio/opel.png'
 import Coffee from '../assets/portfolio/Coffee.JPG'
 
 const portfolioData = [
@@ -30,7 +30,7 @@ const portfolioData = [
     { id: 12, image: ShoesTilted, alt: 'Shoes Sign slightly Tilted' },
     { id: 13, image: Shakes, alt: 'Shakes Sign on a vending machine' },
     { id: 14, image: VIPStand, alt: 'VIP stand sign' },
-    { id: 15, image: Xmas, alt: 'Christmas sign' },
+    { id: 15, image: OpelSign, alt: 'Opel sign' },
     // Add more portfolio items here
 ]
 

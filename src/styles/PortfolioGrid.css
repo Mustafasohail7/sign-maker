@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     width: 96%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
   
 .portfolio-item {

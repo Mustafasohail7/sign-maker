@@ -9,22 +9,24 @@
 }
   
 .tagline_1 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
     line-height: 1.2;
     text-align: center;
-    width: 65%;
+    width: max(46vw,250px);
     text-transform: capitalize;
     color: var(--white-color);
-    font-family: var(--primary-font)
+    font-family: var(--primary-font);
+    /* border: 1px solid brown; */
 }
 
 .tagline_2{
     display: flex;
     justify-content: center;
-    width: 65%;
+    width: max(46vw,250px);
     gap: 4px;
     color: var(--white-color);
     text-transform: uppercase;
+    /* border: 1px solid purple; */
 }
 
 .normal-text{

@@ -9,7 +9,8 @@
 
 
 .navbar-dropdown.open{
-    height: 350px;
+    height: 280px;
+    border-radius: 10px;
 }
 
 .navbar-options-dropdown {
