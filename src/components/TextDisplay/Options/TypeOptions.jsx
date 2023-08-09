@@ -7,8 +7,7 @@ const TypeOptions = ({type,setType}) => {
     const TypeData = [
         {id: 1, name: 'letters'},
         {id: 2, name: 'digits'},
-        {id: 3, name: 'symbols'},
-        {id: 4, name: 'accessory'},
+        // {id: 3, name: 'symbols'}
       ]
 
     return (

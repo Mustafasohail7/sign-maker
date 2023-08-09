@@ -24,8 +24,10 @@ import W from '../assets/letters/W.png';
 import X from '../assets/letters/X.png';
 import Y from '../assets/letters/Y.png';
 import Z from '../assets/letters/Z.png';
+import space from '../assets/blank.jpg'
 
 const images = [
+  { id:0, title: 'space', src: space},
   { id: 1, title: 'A-letter', src: A },
   { id: 2, title: 'B-letter', src: B },
   { id: 3, title: 'C-letter', src: C },

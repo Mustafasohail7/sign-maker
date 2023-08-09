@@ -20,7 +20,7 @@ import Footer from './components/Footer/Footer'
 import HomeIcon from './components/HomeIcon'
 
 function App() {
-  
+
   return (
     <ChakraProvider theme={extendTheme({
       styles: {
@@ -31,6 +31,7 @@ function App() {
         }
       },
     })}>
+      <div>
       <HomeIcon/>
       <Element name='home'>
         <Header/>
@@ -57,6 +58,7 @@ function App() {
       <Element name='about'>
         <Footer/>
       </Element>
+      </div>
     </ChakraProvider>
   );
 }

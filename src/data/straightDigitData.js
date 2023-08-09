@@ -8,8 +8,10 @@ import six from '../assets/digits-straight/6.png'
 import seven from '../assets/digits-straight/7.png'
 import eight from '../assets/digits-straight/8.png'
 import nine from '../assets/digits-straight/9.png'
+import space from  '../assets/zzblank.png'
 
 const images = [
+    {id: 0, src: space, title: 'space'},
     {id: 1, src: zero, title: 'zero'},
     {id: 2, src: one, title: 'one'},
     {id: 3, src: two, title: 'two'},

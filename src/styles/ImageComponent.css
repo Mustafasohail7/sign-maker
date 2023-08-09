@@ -32,6 +32,12 @@
     margin-bottom: 10px;
 }
 
+.space{
+    width: 30px;
+    height: 31px;
+    margin-bottom: 10px;
+}
+
 .letter.slim{
     width: 30px;
 }
@@ -41,6 +47,7 @@
     height: 31px;
     margin-bottom: 10px;
 }
+
 
 @media screen and (max-width: 980px) {
     .image-container{
@@ -62,6 +69,10 @@
     .letter.slim{
         width: 24px;
     }
+    .space{
+        width: 20px;
+        height: 25px;
+    }
 }
 
 @media screen and (max-width: 746px) {
@@ -79,6 +90,10 @@
     }
     .letter.slim{
         width: 18px;
+    }
+    .space{
+        width: 15px;
+        height: 18.5px;
     }
 }
 

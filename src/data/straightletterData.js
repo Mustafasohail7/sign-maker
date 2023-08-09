@@ -24,8 +24,10 @@ import W from '../assets/letters-straight/W.png'
 import X from '../assets/letters-straight/X.png'
 import Y from '../assets/letters-straight/Y.png'
 import Z from '../assets/letters-straight/Z.png'
+import space from '../assets/zzblank.png'
 
 const images = [
+    {id:0, src: space, title: 'space'},
     {id:1, src: A, title: 'A'},
     {id:2, src: B, title: 'B'},
     {id:3, src: C, title: 'C'},
