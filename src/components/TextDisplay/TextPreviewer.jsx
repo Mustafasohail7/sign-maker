@@ -3,20 +3,28 @@ import { useState } from 'react'
 //stylesheet
 import '../../styles/TextPreviewer.css'
 
-const TextPreviewer = ({setUserText}) => {
+import letters from '../../data/straightLetterData'
+
+const TextPreviewer = ({setUserText,setSignImages}) => {
 
   const [text, setText] = useState('')
 
+  const renderSigns = () => {
+    for (const char of text.toUpperCase()){
+      const matchingLetter = letters.find(
+        (letter) => letter.title === `${char}`
+      )
+
+      if(matchingLetter) {
+        setSignImages((prevSignImages) => [...prevSignImages, matchingLetter])
+      }
+    }
+  }
+
   const handleChange = (e) => {
     const newText = e.target.value
-    if(newText.length === 0){
-      console.log('here')
-      setText('')
-      setUserText('Drag Me')
-    }else{
-      setText(newText)
-      setUserText(newText)
-    }
+    setText(newText)
+    renderSigns()
   }
 
   return (

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 //images
-import Xmas from '../assets/Xmas.jpg'
+import bg from '../assets/picture.png'
 
 //components
 import TagLine from './TextDisplay/TagLine'
@@ -11,22 +11,27 @@ import Options from './TextDisplay/Options'
 
 import '../styles/TextDisplay.css'
 
+import adapterImage from '../assets/ZZadapter.png'
+
 const TextDisplay = () => {
 
-    const selectedImage = {id: 2, title: "Coffee Shop" ,src: Xmas}
+    const adapter = {src:adapterImage, title: 'adapter'}
+
+    const selectedImage = {id: 2, title: "Background 1" ,src: bg}
     const [userText,setUserText] = useState('Drag Me')
     const [size, setSize] = useState('small');
     const [color,setColor] = useState('red');
+    const [signImages,setSignImages] = useState([adapter])
 
   return (
     <>
     <div className="component">
         <TagLine/>
-        <TextPreviewer setUserText={setUserText} />
+        <TextPreviewer setUserText={setUserText} setSignImages={setSignImages} />
     </div>
     <div className="function-container">
         <div className="component-left">
-          <ImageComponent userText={userText} selectedImage={selectedImage} size={size} color={color}/>
+          <ImageComponent signImages={signImages} userText={userText} selectedImage={selectedImage} size={size} color={color}/>
         </div>
         <div className='component-right' >
           <Options size={size} setSize={setSize} color={color} setColor={setColor}/>
