@@ -9,18 +9,27 @@ import SectionContainer from './SectionContainer';
 import SizeButton from './SizeButton';
 import ColorButton from './ColorButton';
 
-const Options = ({size,setSize,color,setColor}) => {
+const Options = ({size,setSize}) => {
 
   const SizeData = [
-    {id: 1, name: 'small'},
-    {id: 2, name: 'medium'},
-    {id: 3, name: 'large'},
-    {id: 4, name: 'extra-large'},
+    {id: 1, name: '50 mm'},
+    {id: 2, name: '75 mm'},
+    {id: 3, name: '100 mm'},
+    {id: 4, name: '125 mm'},
+    {id: 5, name: '150 mm'},
+    {id: 6, name: '175 mm'},
+    {id: 7, name: '200 mm'},
   ]
 
   const ColorData = [
-    {id: 1, name: 'white'},
-    {id: 2, name: 'black'},
+    {id: 1, name: 'pink', color: '#c23291'},
+    {id: 2, name: 'red', color: '#da252a'},
+    {id: 3, name: 'chrome yellow', color: '#d1913a'},
+    {id: 4, name: 'pumpkin orange', color: '#e46c4a'},
+    {id: 5, name: 'light green', color: '#73c259'},
+    {id: 6, name: 'meadow green', color: '#309867'},
+    {id: 7, name: 'aqua', color: '#2da3a7'},
+    {id: 8, name: 'reflex blue', color: '#2d3b7c'},
   ]
 
   const [stand, setStand] = useState(false);
@@ -85,7 +94,7 @@ const Options = ({size,setSize,color,setColor}) => {
         <h2 className="section-heading">Choose Color</h2>
         <div className="options">
           {ColorData.map((colorData) => (
-            <ColorButton key={colorData.id} color={color} setColor={setColor} name={colorData.name} />
+            <ColorButton key={colorData.id} name={colorData.name}/>
           ))}
         </div>
       </div>
@@ -147,7 +156,7 @@ const Options = ({size,setSize,color,setColor}) => {
         <h2 className="section-heading">Choose Color</h2>
         <div className="options">
           {ColorData.map((colorData) => (
-            <ColorButton key={colorData.id} color={color} setColor={setColor} name={colorData.name} />
+            <ColorButton key={colorData.id} name={colorData.name} color={colorData.color}/>
           ))}
         </div>
       </div>

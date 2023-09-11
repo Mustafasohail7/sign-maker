@@ -5,26 +5,38 @@ import '../../styles/TextPreviewer.css'
 
 import letters from '../../data/straightLetterData'
 
+import adapterImage from '../../assets/ZZadapter.png'
+
 const TextPreviewer = ({setUserText,setSignImages}) => {
 
-  const [text, setText] = useState('')
+  const adapter = {src:adapterImage, title: 'adapter'}
 
-  const renderSigns = () => {
-    for (const char of text.toUpperCase()){
-      const matchingLetter = letters.find(
-        (letter) => letter.title === `${char}`
-      )
+  const [text,setText] = useState('')
 
+  const renderSigns = (newText) => {
+    let letter_signs = [adapter]
+    for (const char of newText.toUpperCase()){
+      let matchingLetter
+      if(char === ' '){
+        matchingLetter = letters.find(
+          (letter) => letter.title === 'space'
+        )
+      }else{
+        matchingLetter = letters.find(
+          (letter) => letter.title === `${char}`
+        )
+      }
       if(matchingLetter) {
-        setSignImages((prevSignImages) => [...prevSignImages, matchingLetter])
+        letter_signs.push(matchingLetter)
       }
     }
+    setSignImages(letter_signs)
   }
 
   const handleChange = (e) => {
     const newText = e.target.value
     setText(newText)
-    renderSigns()
+    renderSigns(newText)
   }
 
   return (

@@ -25,6 +25,16 @@ import X from '../assets/letters-straight/X.png'
 import Y from '../assets/letters-straight/Y.png'
 import Z from '../assets/letters-straight/Z.png'
 import space from '../assets/zzblank.png'
+import one from '../assets/digits-straight/1.png'
+import two from '../assets/digits-straight/2.png'
+import three from '../assets/digits-straight/3.png'
+import four from '../assets/digits-straight/4.png'
+import five from '../assets/digits-straight/5.png'
+import six from '../assets/digits-straight/6.png'
+import seven from '../assets/digits-straight/7.png'
+import eight from '../assets/digits-straight/8.png'
+import nine from '../assets/digits-straight/9.png'
+import zero from '../assets/digits-straight/0.png'
 
 const images = [
     {id:0, src: space, title: 'space'},
@@ -53,7 +63,17 @@ const images = [
     {id:23, src: W, title: 'W'},
     {id:24, src: X, title: 'X'},
     {id:25, src: Y, title: 'Y'},
-    {id:26, src: Z, title: 'Z'}
+    {id:26, src: Z, title: 'Z'},
+    {id:27, src: one, title: '1'},
+    {id:28, src: two, title: '2'},
+    {id:29, src: three, title: '3'},
+    {id:30, src: four, title: '4'},
+    {id:31, src: five, title: '5'},
+    {id:32, src: six, title: '6'},
+    {id:33, src: seven, title: '7'},
+    {id:34, src: eight, title: '8'},
+    {id:35, src: nine, title: '9'},
+    {id:36, src: zero, title: '0'},
 ]
 
 export default images
