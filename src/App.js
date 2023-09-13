@@ -18,7 +18,7 @@ import DescriptionText from './components/Description_Text/DescriptionText'
 import FAQ from './components/FAQ/FAQ'
 import Footer from './components/Footer/Footer'
 import SocialLinks from './components/Social_Links/SocialLinks'
-import ChatHead from './components/ChatHead' 
+// import ChatHead from './components/ChatHead' 
 import HomeIcon from './components/HomeIcon'
 
 function App() {
@@ -34,7 +34,7 @@ function App() {
       },
     })}>
       <SocialLinks/>
-      <ChatHead/>
+      {/* <ChatHead/> */}
       <HomeIcon/>
       <Element name='home'>
         <Header/>
@@ -49,7 +49,7 @@ function App() {
       <Element name='features'>
         <FeatureGrid/>
       </Element>
-      <div className="static-bg-1"/>
+      {/* <div className="static-bg-1"/> */}
       <Element name='description'>
         <TagLine3/>
         <DescriptionText/>

@@ -36,6 +36,7 @@ const Options = ({size,setSize}) => {
   const [plug, setPlug] = useState(false);
   const [plug2,setPlug2] = useState(false);
   const [wrap,setWrap] = useState(false);
+  const [color,setColor] = useState('')
   
   //change section layout
   const handleSection = () => {
@@ -94,7 +95,7 @@ const Options = ({size,setSize}) => {
         <h2 className="section-heading">Choose Color</h2>
         <div className="options">
           {ColorData.map((colorData) => (
-            <ColorButton key={colorData.id} name={colorData.name}/>
+            <ColorButton key={colorData.id} name={colorData.name} color={colorData.color} selectedColor={color} setSelectedColor={setColor}/>
           ))}
         </div>
       </div>
@@ -156,7 +157,7 @@ const Options = ({size,setSize}) => {
         <h2 className="section-heading">Choose Color</h2>
         <div className="options">
           {ColorData.map((colorData) => (
-            <ColorButton key={colorData.id} name={colorData.name} color={colorData.color}/>
+            <ColorButton key={colorData.id} name={colorData.name} color={colorData.color} selectedColor={color} setSelectedColor={setColor}/>
           ))}
         </div>
       </div>

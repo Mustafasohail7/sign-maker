@@ -9,7 +9,7 @@ const SizeButton = ({size,setSize,name}) => {
 
   return (
     <button
-    className={`font-btn ${size === `${name}` ? 'selected' : ''}`}
+    className={`size-btn ${size === `${name}` ? 'selected' : ''}`}
     onClick={() => handleSizeButton(name)}
     >
         {name}

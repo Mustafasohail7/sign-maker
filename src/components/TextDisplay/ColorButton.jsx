@@ -1,13 +1,13 @@
-const ColorButton = ({color,name}) => {
+const ColorButton = ({color,name,selectedColor,setSelectedColor}) => {
 
     //change color
     const handleColorButton = (buttonId) => {
-        // setColor(buttonId);
+        setSelectedColor(buttonId);
     }
 
   return (
     <button 
-    className={`font-btn ${color === `${name}` ? 'selected' : ''}`}
+    className={`font-btn ${selectedColor === `${name}` ? 'selected' : ''}`}
     style={{backgroundColor: `${color}`}}
     onClick={() => handleColorButton(name)}
     >

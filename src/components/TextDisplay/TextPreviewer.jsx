@@ -46,9 +46,8 @@ const TextPreviewer = ({setUserText,setSignImages}) => {
         className="text-previewer-textbox"
         value={text}
         onChange={handleChange}
-        placeholder='ENTER TEXT HERE 
-        Press Enter/Return for a new line'
-        rows={4}
+        placeholder='ENTER TEXT HERE'
+        rows={3}
         maxLength={100} //fix maxlength
       />
     </div>

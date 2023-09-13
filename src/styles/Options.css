@@ -24,13 +24,13 @@
     text-transform: uppercase;
 }
 
-.font-btn{
+.font-btn, .size-btn{
     cursor: pointer;
     font-size: 1rem;
     line-height: 20px;
     font-weight: 600;
     border-radius: 8px;
-    padding: 14px 24px;
+    padding: 14px 14px;
     transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
     background: var(--primary-gradient);
     color: var(--white-color);
@@ -38,12 +38,17 @@
     text-transform: capitalize;
 }
 
-.font-btn:hover{
+.size-btn{
+    text-transform: lowercase !important;
+    line-height: 10px;
+}
+
+.font-btn:hover, .size-btn:hover{
     box-shadow: rgb(0 0 0 / 50%) 0px 0px 0px 3px;
     background:  rgb(120, 20, 50);
 }
 
-.font-btn.selected{
+.font-btn.selected, .size-btn.selected{
     background: rgb(120, 20, 50);
     box-shadow: rgb(0 0 0 / 100%) 0px 0px 0px 3px;
 }
