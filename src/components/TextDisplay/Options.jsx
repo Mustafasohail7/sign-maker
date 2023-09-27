@@ -9,7 +9,7 @@ import SectionContainer from './SectionContainer';
 import SizeButton from './SizeButton';
 import ColorButton from './ColorButton';
 
-const Options = ({size,setSize}) => {
+const Options = ({size,setSize,color,setColor,render,text}) => {
 
   const SizeData = [
     {id: 1, name: '50 mm'},
@@ -30,13 +30,14 @@ const Options = ({size,setSize}) => {
     {id: 6, name: 'meadow green', color: '#309867'},
     {id: 7, name: 'aqua', color: '#2da3a7'},
     {id: 8, name: 'reflex blue', color: '#2d3b7c'},
+    {id: 9, name: 'black', color: '#454648'},
+    {id: 10, name: 'white', color: '#B9B1B1'}
   ]
 
   const [stand, setStand] = useState(false);
   const [plug, setPlug] = useState(false);
   const [plug2,setPlug2] = useState(false);
   const [wrap,setWrap] = useState(false);
-  const [color,setColor] = useState('')
   
   //change section layout
   const handleSection = () => {
@@ -95,7 +96,7 @@ const Options = ({size,setSize}) => {
         <h2 className="section-heading">Choose Color</h2>
         <div className="options">
           {ColorData.map((colorData) => (
-            <ColorButton key={colorData.id} name={colorData.name} color={colorData.color} selectedColor={color} setSelectedColor={setColor}/>
+            <ColorButton key={colorData.id} name={colorData.name} color={colorData.color} selectedColor={color} setSelectedColor={setColor} render={render} text={text}/>
           ))}
         </div>
       </div>
@@ -157,7 +158,7 @@ const Options = ({size,setSize}) => {
         <h2 className="section-heading">Choose Color</h2>
         <div className="options">
           {ColorData.map((colorData) => (
-            <ColorButton key={colorData.id} name={colorData.name} color={colorData.color} selectedColor={color} setSelectedColor={setColor}/>
+            <ColorButton key={colorData.id} name={colorData.name} color={colorData.color} selectedColor={color} setSelectedColor={setColor} render={render} text={text}/>
           ))}
         </div>
       </div>

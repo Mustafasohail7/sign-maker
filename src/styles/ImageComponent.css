@@ -27,6 +27,10 @@
     flex-wrap: wrap;
 }
 
+.sign-container-color{
+    margin-left: 50px;
+}
+
 .sign-color-container{
     display: flex;
     position: absolute;
@@ -44,10 +48,22 @@
     /* mix-blend-mode: lighten; */
 }
 
+.color-letter{
+    width: 60px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
 
 .space{
     width: 30px;
     height: 31px;
+    margin-bottom: 10px;
+}
+
+.color-space{
+    width: 24px;
+    height: 70px;
     margin-bottom: 10px;
 }
 
@@ -67,12 +83,16 @@
         height: 90%;
     }
     .sign-container{
-        bottom: 1%;
+        bottom: 3%;
     }
 
     .letter{
         width: 40px;
         height: 56px;
+    }
+    .color-letter{
+        width: 60px;
+        height: 70px;
     }
     .adapter{
         height: 24px;
@@ -85,6 +105,11 @@
         width: 20px;
         height: 25px;
     }
+    .color-space{
+        width: 24px;
+        height: 70px;
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 746px) {
@@ -94,6 +119,10 @@
     .letter{
         height: 42px;
         width: 30px;
+    }
+    .color-letter{
+        width: 45px;
+        height: 56px;
     }
     .adapter{
         height: 18px;
@@ -105,5 +134,10 @@
     .space{
         width: 15px;
         height: 18.5px;
+    }
+    .color-space{
+        width: 18px;
+        height: 56px;
+        margin-bottom: 10px;
     }
 }

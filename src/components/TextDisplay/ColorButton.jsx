@@ -1,4 +1,10 @@
-const ColorButton = ({color,name,selectedColor,setSelectedColor}) => {
+import { useEffect } from "react";
+
+const ColorButton = ({color,name,selectedColor,setSelectedColor,render,text}) => {
+
+  useEffect(() => {
+    render(text)
+  },[selectedColor,render,text])
 
     //change color
     const handleColorButton = (buttonId) => {

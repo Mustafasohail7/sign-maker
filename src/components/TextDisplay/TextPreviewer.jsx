@@ -1,42 +1,12 @@
-import { useState } from 'react'
-
 //stylesheet
 import '../../styles/TextPreviewer.css'
 
-import letters from '../../data/straightLetterData'
-
-import adapterImage from '../../assets/ZZadapter.png'
-
-const TextPreviewer = ({setUserText,setSignImages}) => {
-
-  const adapter = {src:adapterImage, title: 'adapter'}
-
-  const [text,setText] = useState('')
-
-  const renderSigns = (newText) => {
-    let letter_signs = [adapter]
-    for (const char of newText.toUpperCase()){
-      let matchingLetter
-      if(char === ' '){
-        matchingLetter = letters.find(
-          (letter) => letter.title === 'space'
-        )
-      }else{
-        matchingLetter = letters.find(
-          (letter) => letter.title === `${char}`
-        )
-      }
-      if(matchingLetter) {
-        letter_signs.push(matchingLetter)
-      }
-    }
-    setSignImages(letter_signs)
-  }
+const TextPreviewer = ({setUserText,setSignImages,color,render,text,setText}) => {
 
   const handleChange = (e) => {
     const newText = e.target.value
     setText(newText)
-    renderSigns(newText)
+    render(newText)
   }
 
   return (
